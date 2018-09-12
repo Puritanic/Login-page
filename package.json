@@ -1,0 +1,60 @@
+{
+	"name": "tm-login",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"axios": "^0.18.0",
+		"node-sass-chokidar": "^1.3.3",
+		"npm-run-all": "^4.1.3",
+		"react": "^16.5.0",
+		"react-dom": "^16.5.0",
+		"react-redux": "^5.0.7",
+		"react-scripts": "^2.0.0-next.b2fd8db8",
+		"redux": "^4.0.0",
+		"redux-thunk": "^2.3.0",
+		"sanitize.css": "^7.0.3"
+	},
+	"scripts": {
+		"start": "npm-run-all -p watch-css start-js",
+		"start-js": "react-scripts start",
+		"build": "npm-run-all build-css build-js",
+		"build-js": "react-scripts build",
+		"build-css": "node-sass-chokidar src/ -o src/",
+		"watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject",
+		"precommit": "lint-staged"
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,json,css}": [
+			"prettier --config .prettierrc --write",
+			"git add"
+		]
+	},
+	"browserslist": {
+		"development": [
+			"last 2 chrome versions",
+			"last 2 firefox versions",
+			"last 2 edge versions"
+		],
+		"production": [
+			">0.25%",
+			"not op_mini all",
+			"ie 9"
+		]
+	},
+	"description": "Simple login page",
+	"main": "index.js",
+	"author": "Darko Tasevski <darktasevski@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-config-prettier": "^3.0.1",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jsx-a11y": "^6.1.1",
+		"eslint-plugin-react": "^7.11.1",
+		"husky": "^0.14.3",
+		"lint-staged": "^7.2.2",
+		"prettier": "^1.14.2"
+	}
+}

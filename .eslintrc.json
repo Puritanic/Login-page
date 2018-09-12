@@ -1,0 +1,17 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": ["airbnb", "prettier", "prettier/react"],
+	"rules": {
+		"no-console": 1,
+		"no-debugger": 1,
+		"no-underscore-dangle": 0,
+		"react/forbid-prop-types": 0,
+		"react/prop-types": [1, { "ignore": ["location", "history"] }],
+		"react/require-default-props": 0,
+		"react/jsx-filename-extension": 0,
+		"no-unused-vars": [1, { "ignoreRestSiblings": true, "caughtErrors": "none" }]
+	}
+}
