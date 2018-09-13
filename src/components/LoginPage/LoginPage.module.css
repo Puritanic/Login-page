@@ -1,8 +1,22 @@
-.App {
-	min-height: 60%;
-	min-width: 70%;
+/* Colors related variables */
+/* Numbers related variables */
+.LoginPage {
+	background: #fff;
+	min-height: 100%;
+	min-width: 100%;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	display: grid;
+	grid-template-columns: 40% 1fr;
+	grid-template-rows: 1fr;
+}
+.LoginPage__left {
+	padding: 17rem 2rem;
+	background-image: linear-gradient(120deg, rgba(0, 128, 128, 0.6), rgba(0, 128, 128, 0.6)),
+		url('../../assets/busy_city.jpeg');
+	background-position: center center;
+	color: #fbfcfb;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 }

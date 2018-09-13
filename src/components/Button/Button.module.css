@@ -1,6 +1,13 @@
+/* Colors related variables */
+/* Numbers related variables */
 .Button {
-	background: rgb(227, 7, 20);
-	color: #fff;
-	padding: 0.8rem 3rem;
+	background: rgba(227, 7, 20, 0.8);
+	color: #fbfcfb;
+	padding: 1rem 6rem;
 	border: none;
+	cursor: pointer;
+}
+.Button:focus,
+.Button:active {
+	outline: 2px solid rgba(168, 189, 152, 0.5);
 }

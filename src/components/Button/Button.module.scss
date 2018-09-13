@@ -1,5 +1,14 @@
+@import '../../styles/shared/variables';
+
 .Button {
 	background: rgba($color: #e30714, $alpha: 0.8);
-	color: #fff;
-	padding: 1rem 2rem;
+	color: $primary-light;
+	padding: 1rem 6rem;
+	border: none;
+	cursor: pointer;
+
+	&:focus,
+	&:active {
+		outline: 2px solid rgba($accent-green, 0.5);
+	}
 }

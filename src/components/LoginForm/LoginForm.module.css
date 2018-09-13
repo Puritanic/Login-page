@@ -1,3 +1,14 @@
+/* Colors related variables */
+/* Numbers related variables */
+/*
+Media query manager mixin
+0-600px:    Phone
+600-900px:  Tablet-portrait mode
+900-1200px:  Tablet-landscape mode
+1200-1800px:  Desktop - this is where all current styles apply
+1800px:  xlDesktop
+1em === 16px
+*/
 .LoginForm {
 	display: flex;
 	flex-direction: column;
@@ -5,18 +16,100 @@
 	align-items: center;
 	padding: 3rem;
 	width: 100%;
+	height: 100%;
+}
+.LoginForm__heading {
+	align-self: flex-start;
+	margin-left: 6rem;
 }
 .LoginForm__form {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	width: 70%;
+	height: 100%;
+	width: 100%;
+	padding-top: 15rem;
 }
 .LoginForm__form > * {
 	margin-bottom: 1rem;
 }
-.LoginForm__form input {
-	padding: 0.7rem 1rem;
-	width: 60%;
+.LoginForm__form__group {
+	padding: 2rem 3rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.LoginForm__form__input {
+	padding: 1rem 2rem;
+	border-radius: 0.2rem;
+	background-color: rgba(222, 227, 222, 0.5);
+	border: none;
+	border-bottom: 3px solid transparent;
+	width: 90%;
+	display: block;
+}
+.LoginForm__form__input:focus {
+	outline: none;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+	border-bottom: 3px solid #a8bd98;
+}
+.LoginForm__form__input:focus:invalid {
+	border-bottom: 3px solid #f92524;
+}
+.LoginForm__form__input::-webkit-input-placeholder {
+	color: #bfbdbd;
+}
+.LoginForm__form__input:not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+.LoginForm__form ::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #bfbdbd;
+	opacity: 1;
+	/* Firefox */
+}
+.LoginForm__form__radio__input {
+	display: none;
+}
+.LoginForm__form__radio__group {
+	padding-left: 2.5rem;
+	width: 100%;
+	display: inline-block;
+}
+.LoginForm__form__radio__label {
+	position: relative;
+	font-size: 1.6rem;
+	cursor: pointer;
+	padding-left: 4rem;
+	line-height: 3rem;
+}
+.LoginForm__form__radio__button {
+	height: 3rem;
+	width: 3rem;
+	border: 5px solid #f92524;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+}
+.LoginForm__form__radio__button::after {
+	content: '';
+	display: block;
+	background-color: #f92524;
+	border-radius: 50%;
+	height: 1.3rem;
+	width: 1.3rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.LoginForm__form__radio__input:checked ~ .LoginForm__form__radio__label .LoginForm__form__radio__button:after {
+	opacity: 1;
+}
+.LoginForm__btn {
+	margin-top: 2rem;
 }
