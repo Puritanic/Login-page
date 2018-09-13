@@ -1,0 +1,35 @@
+/* Colors related variables */
+$bg: #fff;
+$primary-light: #fbfcfb;
+$primary-dark: #484951;
+$mid-white: #dee3de;
+$gray: #bfbdbd;
+$secondary-dark: #857e89;
+$accent-light: #eb7f76;
+$accent-red: #f92524;
+$text-dark: #202124;
+$footer-dark: #1c1d20;
+$comment-bg: #f8f9fa;
+
+/* Numbers related variables */
+$xxs: 0.5rem;
+$xs: 1rem;
+$sm: 1.5rem;
+$md: 2.5rem;
+$lg: 3.5rem;
+$xl: 4rem;
+$xxl: 4.5rem;
+
+$container-default-width: 80%;
+$container-medium-width: 70%;
+$container-small-width: 60%;
+$container-max-width: 1200px;
+
+// Typography
+
+$font-size-base: 62.5%;
+$line-height-base: 1.7;
+$default-font-size: 1.6rem;
+
+$heading-font-family: 'Lato', sans-serif;
+$primary-font-family: 'Open Sans', sans-serif;

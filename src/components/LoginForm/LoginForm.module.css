@@ -1,0 +1,22 @@
+.LoginForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem;
+	width: 100%;
+}
+.LoginForm__form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+}
+.LoginForm__form > * {
+	margin-bottom: 1rem;
+}
+.LoginForm__form input {
+	padding: 0.7rem 1rem;
+	width: 60%;
+}
