@@ -1,4 +1,9 @@
 .Logo {
 	display: block;
-	width: 250px;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+.Logo img {
+	width: 220px;
 }

@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import LoginPage from './components/LoginPage/LoginPage';
 import Header from './components/Header/Header';
@@ -7,11 +8,11 @@ import styles from './App.module.css';
 
 const App = () => {
 	return (
-		<Fragment>
+		<Router>
 			<main className={styles.App}>
-				<LoginPage />
+				<Route path="/login" component={LoginPage} />
 			</main>
-		</Fragment>
+		</Router>
 	);
 };
 

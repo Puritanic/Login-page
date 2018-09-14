@@ -20,7 +20,7 @@ Media query manager mixin
 }
 .LoginForm__heading {
 	align-self: flex-start;
-	margin-left: 6rem;
+	margin-left: 3rem;
 }
 .LoginForm__form {
 	display: flex;
@@ -34,12 +34,25 @@ Media query manager mixin
 	margin-bottom: 1rem;
 }
 .LoginForm__form__group {
-	padding: 2rem 3rem;
+	padding: 0 2rem;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+}
+.LoginForm__form__label {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-left: 2rem;
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0);
+	transition: all 0.3s;
+}
+.LoginForm__form__input:placeholder-shown + .LoginForm__form__label {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-4rem);
 }
 .LoginForm__form__input {
 	padding: 1rem 2rem;
@@ -47,7 +60,7 @@ Media query manager mixin
 	background-color: rgba(222, 227, 222, 0.5);
 	border: none;
 	border-bottom: 3px solid transparent;
-	width: 90%;
+	width: 100%;
 	display: block;
 }
 .LoginForm__form__input:focus {
@@ -60,9 +73,6 @@ Media query manager mixin
 }
 .LoginForm__form__input::-webkit-input-placeholder {
 	color: #bfbdbd;
-}
-.LoginForm__form__input:not(:last-child) {
-	margin-bottom: 1.5rem;
 }
 .LoginForm__form ::placeholder {
 	/* Chrome, Firefox, Opera, Safari 10.1+ */

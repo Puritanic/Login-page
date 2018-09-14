@@ -9,6 +9,7 @@
 	display: grid;
 	grid-template-columns: 40% 1fr;
 	grid-template-rows: 1fr;
+	position: relative;
 
 	&__left {
 		padding: 17rem 2rem;

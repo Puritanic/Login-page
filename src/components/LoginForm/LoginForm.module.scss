@@ -12,7 +12,7 @@
 
 	&__heading {
 		align-self: flex-start;
-		margin-left: 6rem;
+		margin-left: 3rem;
 	}
 
 	&__form {
@@ -28,21 +28,41 @@
 		}
 
 		&__group {
-			padding: 2rem 3rem;
+			padding: 0 2rem;
 			width: 100%;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+
+			// &:not(:last-child) {
+			// 	margin-bottom: 1.5rem;
+			// }
+		}
+
+		&__label {
+			font-size: 1.2rem;
+			font-weight: 700;
+			margin-left: 2rem;
+			display: block;
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0);
+			transition: all 0.3s;
+		}
+
+		&__input:placeholder-shown + &__label {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-4rem);
 		}
 
 		&__input {
 			padding: 1rem 2rem;
+
 			border-radius: 0.2rem;
 			background-color: rgba($mid-white, 0.5);
 			border: none;
 			border-bottom: 3px solid transparent;
-			width: 90%;
+			width: 100%;
 			display: block;
 
 			&:focus {
@@ -52,16 +72,16 @@
 			}
 
 			&:focus:invalid {
-				border-bottom: 3px solid $accent-red;
+				border-bottom: 3px solid $accent-main;
 			}
 
 			&::-webkit-input-placeholder {
 				color: $gray;
 			}
 
-			&:not(:last-child) {
-				margin-bottom: 1.5rem;
-			}
+			// &:not(:last-child) {
+			// 	margin-bottom: 1.5rem;
+			// }
 		}
 
 		& ::placeholder {
@@ -91,7 +111,7 @@
 		&__radio__button {
 			height: 3rem;
 			width: 3rem;
-			border: 5px solid $accent-red;
+			border: 5px solid $accent-main;
 			border-radius: 50%;
 			display: inline-block;
 			position: absolute;
@@ -100,7 +120,7 @@
 			&::after {
 				content: '';
 				display: block;
-				background-color: $accent-red;
+				background-color: $accent-main;
 				border-radius: 50%;
 				height: 1.3rem;
 				width: 1.3rem;
