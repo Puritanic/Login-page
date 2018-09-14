@@ -10,7 +10,7 @@ const App = () => {
 	return (
 		<Router>
 			<main className={styles.App}>
-				<Route path="/login" component={LoginPage} />
+				<Route component={LoginPage} />
 			</main>
 		</Router>
 	);
