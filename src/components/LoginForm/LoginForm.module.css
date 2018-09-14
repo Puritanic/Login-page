@@ -112,8 +112,8 @@ Media query manager mixin
 	height: 1.3rem;
 	width: 1.3rem;
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 51%;
+	left: 52%;
 	transform: translate(-50%, -50%);
 	opacity: 0;
 }

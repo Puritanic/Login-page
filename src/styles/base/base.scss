@@ -45,6 +45,11 @@ h6 {
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: $primary-dark;
+}
+
 #root {
 	display: flex;
 	flex-direction: column;
