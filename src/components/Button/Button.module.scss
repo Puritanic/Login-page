@@ -11,4 +11,9 @@
 	&:active {
 		outline: 2px solid rgba($accent-green, 0.5);
 	}
+
+	&:disabled {
+		background: $secondary-dark;
+		cursor: not-allowed;
+	}
 }

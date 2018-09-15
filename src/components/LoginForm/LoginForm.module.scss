@@ -27,6 +27,13 @@
 			margin-bottom: 1rem;
 		}
 
+		&__error {
+			display: block;
+			padding: 0.5rem 1rem;
+			border-radius: 5px;
+			background: rgba($accent-red, 0.2);
+		}
+
 		&__group {
 			padding: 0 2rem;
 			width: 100%;
