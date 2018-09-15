@@ -52,7 +52,7 @@
 		color: $text-dark;
 		display: grid;
 		grid-template-columns: 40% repeat(2, 1fr);
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 
 		@include respond(tab-port) {
 			font-size: 1.4rem;

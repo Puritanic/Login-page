@@ -9,6 +9,10 @@ Media query manager mixin
 1800px:  xlDesktop
 1em === 16px
 */
+:root {
+	--theme-color: #fff;
+}
+
 html,
 body,
 #root {

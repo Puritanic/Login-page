@@ -64,7 +64,7 @@ Media query manager mixin
 	color: #202124;
 	display: grid;
 	grid-template-columns: 40% repeat(2, 1fr);
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 }
 @media (max-width: 56.25em) {
 	.LoginPage__info {

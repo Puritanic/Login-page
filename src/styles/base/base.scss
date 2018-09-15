@@ -1,6 +1,10 @@
 @import '../shared/variables';
 @import '../shared/mixins';
 
+:root {
+	--theme-color: #fff;
+}
+
 html,
 body,
 #root {

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { pageManifest } from '../../index';
+
 import styles from './LoginPage.module.css';
 import LoginForm from '../LoginForm/LoginForm';
 import Logo from '../Logo/Logo';
@@ -8,11 +10,13 @@ import Info from './Info';
 
 const LoginPage = () => (
 	<section className={styles.LoginPage}>
-		<Logo imgUrl="https://abo.24heures.ch/tamstorefront/tamMedia/logo-website_24.svg" />
+		<Logo imgUrl={pageManifest.logoUrl} />
 		<section className={styles.LoginPage__left}>
 			<div>
-				<p>Abonné(e) au journal mais pas encore enregistré(e) ?</p>
-				<Button text="Activer l’accès" />
+				<p>{pageManifest.messages.info.activateAcc}</p>
+				<a href={pageManifest.activateAccUrl}>
+					<Button text={pageManifest.messages.info.activateAccBtn} />
+				</a>
 			</div>
 		</section>
 		<LoginForm />

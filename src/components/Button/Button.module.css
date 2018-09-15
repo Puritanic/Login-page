@@ -1,7 +1,7 @@
 /* Colors related variables */
 /* Numbers related variables */
 .Button {
-	background: rgba(227, 7, 20, 0.8);
+	background: var(--theme-color);
 	color: #fbfcfb;
 	padding: 1rem 6rem;
 	border: none;
@@ -9,7 +9,7 @@
 }
 .Button:focus,
 .Button:active {
-	outline: 10px solid rgba(168, 189, 152, 0.5);
+	outline: 3px solid rgba(168, 189, 152, 0.5);
 }
 .Button:disabled {
 	background: #857e89;

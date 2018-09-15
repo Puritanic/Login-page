@@ -42,7 +42,7 @@ Media query manager mixin
 }
 @media (max-width: 56.25em) {
 	.LoginForm__form {
-		padding-top: 5rem;
+		padding-top: 10rem;
 	}
 }
 .LoginForm__form > * {
@@ -95,7 +95,7 @@ Media query manager mixin
 	border-bottom: 3px solid #a8bd98;
 }
 .LoginForm__form__input:focus:invalid {
-	border-bottom: 3px solid #f92524;
+	border-bottom: 3px solid #0178bd;
 }
 .LoginForm__form__input::-webkit-input-placeholder {
 	color: #bfbdbd;
@@ -130,7 +130,7 @@ Media query manager mixin
 .LoginForm__form__radio__button {
 	height: 3rem;
 	width: 3rem;
-	border: 5px solid #f92524;
+	border: 5px solid var(--theme-color);
 	border-radius: 50%;
 	display: inline-block;
 	position: absolute;
@@ -139,7 +139,7 @@ Media query manager mixin
 .LoginForm__form__radio__button::after {
 	content: '';
 	display: block;
-	background-color: #f92524;
+	background-color: var(--theme-color);
 	border-radius: 50%;
 	height: 1.3rem;
 	width: 1.3rem;

@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
+import { pageManifest } from '../../index';
 import { userLogin } from '../../actions/login';
 
 import styles from './LoginForm.module.css';
 import Button from '../Button/Button';
-import InfoBlock from '../LoginPage/InfoBlock';
 
 class LoginForm extends Component {
 	state = {
 		email: '',
 		password: '',
-		formErrors: { email: '', password: '' },
 	};
 
 	isFormValid = () => {
 		const { email, password } = this.state;
 
-		return password.length > 6 && email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+		return password.length >= 6 && email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
 	};
 	onSubmit = e => {
 		e.preventDefault();
@@ -33,12 +31,10 @@ class LoginForm extends Component {
 	render() {
 		const { email, password } = this.state;
 
-		console.log(this.props.error);
-
 		return (
 			<section className={styles.LoginForm}>
 				<form className={styles.LoginForm__form} onSubmit={this.onSubmit}>
-					<h2 className={styles.LoginForm__heading}>Je me connecte</h2>
+					<h2 className={styles.LoginForm__heading}>{pageManifest.messages.form.heading}</h2>
 					<div className={styles.LoginForm__form__group}>
 						<input
 							value={email}
@@ -46,10 +42,10 @@ class LoginForm extends Component {
 							onChange={this.onChange}
 							className={styles.LoginForm__form__input}
 							type="email"
-							placeholder="Adresse e-mail"
+							placeholder={pageManifest.messages.form.inputEmail}
 						/>
 						<label htmlFor="name" className={styles.LoginForm__form__label}>
-							Adresse e-mail
+							{pageManifest.messages.form.inputEmail}
 						</label>
 					</div>
 					<div className={styles.LoginForm__form__group}>
@@ -59,10 +55,10 @@ class LoginForm extends Component {
 							onChange={this.onChange}
 							className={styles.LoginForm__form__input}
 							type="password"
-							placeholder="Mot de passe"
+							placeholder={pageManifest.messages.form.inputPass}
 						/>
 						<label htmlFor="name" className={styles.LoginForm__form__label}>
-							Mot de passe
+							{pageManifest.messages.form.inputPass}
 						</label>
 					</div>
 					<div className={styles.LoginForm__form__radio__group}>
@@ -74,14 +70,14 @@ class LoginForm extends Component {
 						/>
 						<label tabIndex="-1" className={styles.LoginForm__form__radio__label} htmlFor="remember">
 							<span tabIndex="0" className={styles.LoginForm__form__radio__button} />
-							Rester connecté
+							{pageManifest.messages.form.rememberMe}
 						</label>
 					</div>
 					<Button
 						disabled={!this.isFormValid()}
 						type="submit"
 						customClass={styles.LoginForm__btn}
-						text={'Login'}
+						text={pageManifest.messages.form.loginBtn}
 					/>
 				</form>
 				{this.props.error && <p className={styles.LoginForm__form__error}>{this.props.error || null}</p>}

@@ -1,7 +1,7 @@
 @import '../../styles/shared/variables';
 
 .Button {
-	background: rgba($color: #e30714, $alpha: 0.8);
+	background: var(--theme-color);
 	color: $primary-light;
 	padding: 1rem 6rem;
 	border: none;
@@ -9,7 +9,7 @@
 
 	&:focus,
 	&:active {
-		outline: 10px solid rgba($accent-green, 0.5);
+		outline: 3px solid rgba($accent-green, 0.5);
 	}
 
 	&:disabled {
