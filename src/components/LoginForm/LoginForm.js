@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { pageManifest } from '../../index';
@@ -8,6 +9,11 @@ import styles from './LoginForm.module.css';
 import Button from '../Button/Button';
 
 class LoginForm extends Component {
+	static propTypes = {
+		userLogin: PropTypes.func.isRequired,
+		error: PropTypes.string,
+	};
+
 	state = {
 		email: '',
 		password: '',
@@ -34,7 +40,7 @@ class LoginForm extends Component {
 		return (
 			<section className={styles.LoginForm}>
 				<form className={styles.LoginForm__form} onSubmit={this.onSubmit}>
-					<h2 className={styles.LoginForm__heading}>{pageManifest.messages.form.heading}</h2>
+					<h2 className={styles.LoginForm__heading}>{pageManifest.messages().form.heading}</h2>
 					<div className={styles.LoginForm__form__group}>
 						<input
 							value={email}
@@ -42,10 +48,10 @@ class LoginForm extends Component {
 							onChange={this.onChange}
 							className={styles.LoginForm__form__input}
 							type="email"
-							placeholder={pageManifest.messages.form.inputEmail}
+							placeholder={pageManifest.messages().form.inputEmail}
 						/>
 						<label htmlFor="name" className={styles.LoginForm__form__label}>
-							{pageManifest.messages.form.inputEmail}
+							{pageManifest.messages().form.inputEmail}
 						</label>
 					</div>
 					<div className={styles.LoginForm__form__group}>
@@ -55,10 +61,10 @@ class LoginForm extends Component {
 							onChange={this.onChange}
 							className={styles.LoginForm__form__input}
 							type="password"
-							placeholder={pageManifest.messages.form.inputPass}
+							placeholder={pageManifest.messages().form.inputPass}
 						/>
 						<label htmlFor="name" className={styles.LoginForm__form__label}>
-							{pageManifest.messages.form.inputPass}
+							{pageManifest.messages().form.inputPass}
 						</label>
 					</div>
 					<div className={styles.LoginForm__form__radio__group}>
@@ -70,18 +76,18 @@ class LoginForm extends Component {
 						/>
 						<label tabIndex="-1" className={styles.LoginForm__form__radio__label} htmlFor="remember">
 							<span tabIndex="0" className={styles.LoginForm__form__radio__button} />
-							{pageManifest.messages.form.rememberMe}
+							{pageManifest.messages().form.rememberMe}
 						</label>
 					</div>
 					<Button
 						disabled={!this.isFormValid()}
 						type="submit"
 						customClass={styles.LoginForm__btn}
-						text={pageManifest.messages.form.loginBtn}
+						text={pageManifest.messages().form.loginBtn}
 					/>
 
 					<a href={pageManifest.forgotPassUrl}>
-						<small>{pageManifest.messages.form.forgotPass}</small>
+						<small>{pageManifest.messages().form.forgotPass}</small>
 					</a>
 				</form>
 				{this.props.error && <p className={styles.LoginForm__form__error}>{this.props.error || null}</p>}

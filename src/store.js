@@ -2,14 +2,14 @@ import { createStore, applyMiddleware } from 'redux';
 import loginReducer from './reducers/login.js';
 import { pageManifest } from './index';
 
-import { types, secret, pageUrl } from './constants.js';
+import { types, secret } from './constants.js';
 
 // Custom middleware for (not really) authenticating user
 const validateUser = () => next => action => {
 	if (action.type === types.VALIDATE_LOGIN) {
 		if (action.userData && action.userData.password === secret) {
 			console.log('GOTCHA');
-			window.location = pageUrl;
+			window.location = pageManifest.page;
 			const validAction = next({ type: types.LOGIN_SUCCESSFUL });
 			return validAction;
 		} else {

@@ -10,12 +10,12 @@ import Info from './Info';
 
 const LoginPage = () => (
 	<section className={styles.LoginPage}>
-		<Logo title={pageManifest.title} imgUrl={pageManifest.logoUrl} />
+		<Logo pageUrl={pageManifest.page} title={pageManifest.title} imgUrl={pageManifest.logoUrl} />
 		<section className={styles.LoginPage__left}>
 			<div>
-				<p>{pageManifest.messages.info.activateAcc}</p>
+				<p>{pageManifest.messages().info.activateAcc}</p>
 				<a href={pageManifest.activateAccUrl}>
-					<Button text={pageManifest.messages.info.activateAccBtn} />
+					<Button text={pageManifest.messages().info.activateAccBtn} />
 				</a>
 			</div>
 		</section>

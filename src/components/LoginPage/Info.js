@@ -7,20 +7,19 @@ import InfoBlock from './InfoBlock';
 import Button from '../Button/Button';
 
 const Info = () => {
+	const { messages, activateAccUrl, fillFormUrl } = pageManifest;
+
 	return (
 		<section className={styles.LoginPage__info}>
-			<InfoBlock customClass={styles.LoginPage__register} text={pageManifest.messages.info.activateAcc}>
-				<a href={pageManifest.activateAccUrl}>
-					<Button
-						customClass={styles.LoginPage__register__btn}
-						text={pageManifest.messages.info.activateAccBtn}
-					/>
+			<InfoBlock customClass={styles.LoginPage__register} text={messages().info.activateAcc}>
+				<a href={activateAccUrl}>
+					<Button customClass={styles.LoginPage__register__btn} text={messages().info.activateAccBtn} />
 				</a>
 			</InfoBlock>
-			<InfoBlock icon="MdLocalPhone" text={pageManifest.messages.info.contact()} iconSize="2em" displayIcon />
+			<InfoBlock icon="MdLocalPhone" text={messages().info.contact()} iconSize="2em" displayIcon />
 			<InfoBlock
 				icon="MdVpnLock"
-				text={pageManifest.messages.info.sslProtected}
+				text={messages().info.sslProtected}
 				iconColor="#484951"
 				iconSize="2em"
 				displayIcon
@@ -28,11 +27,11 @@ const Info = () => {
 			<InfoBlock
 				displayIcon
 				icon="MdMailOutline"
-				text={pageManifest.messages.info.fillFormP1}
+				text={messages().info.fillFormP1}
 				iconColor="#484951"
 				iconSize="2em"
 			>
-				<a href={pageManifest.fillFormUrl}>{pageManifest.messages.info.fillFormP2}</a>
+				<a href={fillFormUrl}>{messages().info.fillFormP2}</a>
 			</InfoBlock>
 		</section>
 	);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import * as icons from 'react-icons/md';
 
@@ -23,6 +24,16 @@ const InfoBlock = ({ icon, text, customClass, displayIcon, iconColor, iconSize, 
 			{children}
 		</div>
 	);
+};
+
+InfoBlock.propTypes = {
+	icon: PropTypes.string,
+	text: PropTypes.string,
+	customClass: PropTypes.string,
+	displayIcon: PropTypes.bool,
+	iconColor: PropTypes.string,
+	iconSize: PropTypes.string,
+	children: PropTypes.any,
 };
 
 export default InfoBlock;
