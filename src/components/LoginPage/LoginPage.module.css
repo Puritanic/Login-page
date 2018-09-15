@@ -1,9 +1,18 @@
 /* Colors related variables */
 /* Numbers related variables */
+/*
+Media query manager mixin
+0-600px:    Phone
+600-900px:  Tablet-portrait mode
+900-1200px:  Tablet-landscape mode
+1200-1800px:  Desktop - this is where all current styles apply
+1800px:  xlDesktop
+1em === 16px
+*/
 .LoginPage {
 	background: #fff;
-	min-height: 100%;
-	min-width: 100%;
+	width: 70%;
+	margin: 0 auto;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	display: grid;
 	grid-template-columns: 40% 1fr;
@@ -11,18 +20,41 @@
 	position: relative;
 	overflow: hidden;
 }
+@media (max-width: 75em) {
+	.LoginPage {
+		width: 90%;
+	}
+}
+@media (max-width: 56.25em) {
+	.LoginPage {
+		width: 99%;
+		height: 99%;
+	}
+}
+@media (max-width: 37.5em) {
+	.LoginPage {
+		grid-template-columns: 1fr;
+		overflow: auto;
+	}
+}
 .LoginPage__left {
 	grid-column: 1 /2;
 	padding: 17rem 2rem;
 	background-image: linear-gradient(120deg, rgba(0, 128, 128, 0.6), rgba(0, 128, 128, 0.6)),
 		url('../../assets/busy_city.jpeg');
-	background-position: center center;
+	background-size: cover;
+	background-position: top center;
 	color: #fbfcfb;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
 	height: 150%;
+}
+@media (max-width: 37.5em) {
+	.LoginPage__left {
+		display: none;
+	}
 }
 .LoginPage__info {
 	grid-column: 1 / 3;
@@ -34,6 +66,17 @@
 	grid-template-columns: 40% repeat(2, 1fr);
 	font-size: 1.7rem;
 }
+@media (max-width: 56.25em) {
+	.LoginPage__info {
+		font-size: 1.4rem;
+	}
+}
+@media (max-width: 37.5em) {
+	.LoginPage__info {
+		grid-template-columns: 1fr;
+		grid-auto-rows: 1fr;
+	}
+}
 .LoginPage__info__block {
 	display: flex;
 	flex-direction: column;
@@ -43,9 +86,35 @@
 	text-align: center;
 	color: #857e89;
 }
-.LoginPage__info__block:first-of-type {
+.LoginPage__info__block:nth-of-type(2) {
 	color: #fbfcfb;
 }
-.LoginPage__info__block:first-of-type small {
+.LoginPage__info__block:nth-of-type(2) small {
 	padding-bottom: 2rem;
+}
+@media (max-width: 37.5em) {
+	.LoginPage__info__block:nth-of-type(2) {
+		color: #857e89;
+	}
+	.LoginPage__info__block:nth-of-type(2) small {
+		padding-bottom: 0;
+	}
+}
+.LoginPage__register {
+	display: none;
+}
+@media (max-width: 37.5em) {
+	.LoginPage__register {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.LoginPage__register small {
+		color: #857e89;
+		margin-bottom: 0.5rem;
+	}
+}
+.LoginPage__register__btn {
+	margin-top: 3px;
+	padding: 2px 10px !important;
 }

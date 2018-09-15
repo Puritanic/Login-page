@@ -1,3 +1,12 @@
+/*
+Media query manager mixin
+0-600px:    Phone
+600-900px:  Tablet-portrait mode
+900-1200px:  Tablet-landscape mode
+1200-1800px:  Desktop - this is where all current styles apply
+1800px:  xlDesktop
+1em === 16px
+*/
 .Logo {
 	display: block;
 	position: absolute;
@@ -6,4 +15,9 @@
 }
 .Logo img {
 	width: 220px;
+}
+@media (max-width: 56.25em) {
+	.Logo img {
+		width: 170px;
+	}
 }

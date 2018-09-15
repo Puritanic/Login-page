@@ -18,17 +18,32 @@ Media query manager mixin
 	width: 100%;
 	height: 100%;
 }
+@media (max-width: 56.25em) {
+	.LoginForm {
+		padding: 3rem 1rem 0 1rem;
+	}
+}
 .LoginForm__heading {
 	align-self: flex-start;
+	font-size: 125%;
 	margin-left: 3rem;
+}
+@media (max-width: 56.25em) {
+	.LoginForm__heading {
+		margin-left: 1rem;
+	}
 }
 .LoginForm__form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 100%;
 	width: 100%;
 	padding-top: 15rem;
+}
+@media (max-width: 56.25em) {
+	.LoginForm__form {
+		padding-top: 5rem;
+	}
 }
 .LoginForm__form > * {
 	margin-bottom: 1rem;
@@ -44,6 +59,11 @@ Media query manager mixin
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+}
+@media (max-width: 56.25em) {
+	.LoginForm__form__group {
+		padding: 0;
+	}
 }
 .LoginForm__form__label {
 	font-size: 1.2rem;
@@ -94,12 +114,18 @@ Media query manager mixin
 	width: 100%;
 	display: inline-block;
 }
+@media (max-width: 56.25em) {
+	.LoginForm__form__radio__group {
+		padding-left: 0;
+	}
+}
 .LoginForm__form__radio__label {
 	position: relative;
 	font-size: 1.6rem;
 	cursor: pointer;
 	padding-left: 4rem;
 	line-height: 3rem;
+	outline: none;
 }
 .LoginForm__form__radio__button {
 	height: 3rem;
@@ -122,6 +148,10 @@ Media query manager mixin
 	left: 52%;
 	transform: translate(-50%, -50%);
 	opacity: 0;
+}
+.LoginForm__form__radio__button:focus {
+	outline: 2px solid #a8bd98;
+	outline-offset: 0.2rem;
 }
 .LoginForm__form__radio__input:checked ~ .LoginForm__form__radio__label .LoginForm__form__radio__button:after {
 	opacity: 1;

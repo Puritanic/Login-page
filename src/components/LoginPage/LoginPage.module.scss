@@ -1,10 +1,11 @@
 @import '../../styles/shared/variables';
+@import '../../styles/shared/mixins';
 
 .LoginPage {
 	background: #fff;
-	// background: linear-gradient(110deg, rgba($color: #e30714, $alpha: 0.3) 45%, #fff 45%);
-	min-height: 100%;
-	min-width: 100%;
+	// background: linear-gradient(110deg, rgba($color: #e30714, $alpha: 0.1) 65%, #fff 45%);
+	width: 70%;
+	margin: 0 auto;
 	box-shadow: 0 2px 5px rgba($color: #000, $alpha: 0.3);
 	display: grid;
 	grid-template-columns: 40% 1fr;
@@ -12,21 +13,35 @@
 	position: relative;
 	overflow: hidden;
 
+	@include respond(tab-land) {
+		width: 90%;
+	}
+	@include respond(tab-port) {
+		width: 99%;
+		height: 99%;
+	}
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+		overflow: auto;
+	}
+
 	&__left {
 		grid-column: 1 /2;
 		padding: 17rem 2rem;
 		background-image: linear-gradient(120deg, rgba(#008080, 0.6), rgba(#008080, 0.6)),
 			url('../../assets/busy_city.jpeg');
-		background-position: center center;
+		background-size: cover;
+		background-position: top center;
 		color: $primary-light;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
 		height: 150%;
-	}
 
-	&__register {
+		@include respond(phone) {
+			display: none;
+		}
 	}
 
 	&__info {
@@ -39,6 +54,15 @@
 		grid-template-columns: 40% repeat(2, 1fr);
 		font-size: 1.7rem;
 
+		@include respond(tab-port) {
+			font-size: 1.4rem;
+		}
+
+		@include respond(phone) {
+			grid-template-columns: 1fr;
+			grid-auto-rows: 1fr;
+		}
+
 		&__block {
 			display: flex;
 			flex-direction: column;
@@ -48,13 +72,41 @@
 			text-align: center;
 			color: $secondary-dark;
 
-			&:first-of-type {
+			&:nth-of-type(2) {
 				color: $primary-light;
 
 				& small {
 					padding-bottom: 2rem;
 				}
+
+				@include respond(phone) {
+					color: $secondary-dark;
+
+					& small {
+						padding-bottom: 0;
+					}
+				}
 			}
+		}
+	}
+
+	&__register {
+		display: none;
+
+		@include respond(phone) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			& small {
+				color: $secondary-dark;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		&__btn {
+			margin-top: 3px;
+			padding: 2px 10px !important;
 		}
 	}
 }

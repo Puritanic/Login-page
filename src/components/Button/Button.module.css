@@ -9,7 +9,7 @@
 }
 .Button:focus,
 .Button:active {
-	outline: 2px solid rgba(168, 189, 152, 0.5);
+	outline: 10px solid rgba(168, 189, 152, 0.5);
 }
 .Button:disabled {
 	background: #857e89;

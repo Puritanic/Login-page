@@ -10,7 +10,7 @@ const LoginPage = () => (
 	<section className={styles.LoginPage}>
 		<Logo imgUrl="https://abo.24heures.ch/tamstorefront/tamMedia/logo-website_24.svg" />
 		<section className={styles.LoginPage__left}>
-			<div className={styles.LoginPage__register}>
+			<div>
 				<p>Abonné(e) au journal mais pas encore enregistré(e) ?</p>
 				<Button text="Activer l’accès" />
 			</div>

@@ -6,6 +6,7 @@ import { userLogin } from '../../actions/login';
 
 import styles from './LoginForm.module.css';
 import Button from '../Button/Button';
+import InfoBlock from '../LoginPage/InfoBlock';
 
 class LoginForm extends Component {
 	state = {
@@ -71,8 +72,8 @@ class LoginForm extends Component {
 							type="checkbox"
 							name="remember"
 						/>
-						<label className={styles.LoginForm__form__radio__label} htmlFor="remember">
-							<span className={styles.LoginForm__form__radio__button} />
+						<label tabIndex="-1" className={styles.LoginForm__form__radio__label} htmlFor="remember">
+							<span tabIndex="0" className={styles.LoginForm__form__radio__button} />
 							Rester connecté
 						</label>
 					</div>

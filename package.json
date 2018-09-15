@@ -3,7 +3,6 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"axios": "^0.18.0",
 		"classnames": "^2.2.6",
 		"node-sass-chokidar": "^1.3.3",
 		"npm-run-all": "^4.1.3",
@@ -14,8 +13,17 @@
 		"react-router-dom": "^4.3.1",
 		"react-scripts": "^2.0.0-next.b2fd8db8",
 		"redux": "^4.0.0",
-		"redux-thunk": "^2.3.0",
 		"sanitize.css": "^7.0.3"
+	},
+	"devDependencies": {
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-config-prettier": "^3.0.1",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jsx-a11y": "^6.1.1",
+		"eslint-plugin-react": "^7.11.1",
+		"husky": "^0.14.3",
+		"lint-staged": "^7.2.2",
+		"prettier": "^1.14.2"
 	},
 	"scripts": {
 		"start": "npm-run-all -p watch-css start-js",
@@ -36,9 +44,9 @@
 	},
 	"browserslist": {
 		"development": [
-			"last 2 chrome versions",
-			"last 2 firefox versions",
-			"last 2 edge versions"
+			"last 3 chrome versions",
+			"last 3 firefox versions",
+			"last 3 edge versions"
 		],
 		"production": [
 			">0.25%",
@@ -49,15 +57,5 @@
 	"description": "Simple login page",
 	"main": "index.js",
 	"author": "Darko Tasevski <darktasevski@gmail.com>",
-	"license": "MIT",
-	"devDependencies": {
-		"eslint-config-airbnb": "^17.1.0",
-		"eslint-config-prettier": "^3.0.1",
-		"eslint-plugin-import": "^2.14.0",
-		"eslint-plugin-jsx-a11y": "^6.1.1",
-		"eslint-plugin-react": "^7.11.1",
-		"husky": "^0.14.3",
-		"lint-staged": "^7.2.2",
-		"prettier": "^1.14.2"
-	}
+	"license": "MIT"
 }
