@@ -1,4 +1,4 @@
-import { types } from '../actions/constants';
+import { types } from '../constants';
 
 const initialState = {
 	error: null,

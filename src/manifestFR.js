@@ -1,12 +1,13 @@
-export default function Manifest(title, acronym) {
+export default function Manifest({ title, acronym, contactPhone, accentColor }) {
 	return {
-		page: 'https://www.tdg.ch/',
+		title,
+		page: `https://www.${title}.ch/`,
 		locale: 'fr',
-		accentColor: '#015395',
-		logoUrl: 'https://abo.tdg.ch/tamstorefront/tamMedia/logo-website_TG.svg',
-		forgotPassUrl: 'https://abo.tdg.ch/tamstorefront/login/pw/request?callerUri=',
-		activateAccUrl: 'https://abo.tdg.ch/tamstorefront/activate?callerUri=',
-		fillFormUrl: 'https://abo.tdg.ch/tamstorefront/contact',
+		accentColor,
+		logoUrl: `https://abo.${title}.ch/tamstorefront/tamMedia/logo-website_${acronym}.svg`,
+		forgotPassUrl: `https://abo.${title}.ch/tamstorefront/login/pw/request?callerUri=`,
+		activateAccUrl: `https://abo.${title}.ch/tamstorefront/activate?callerUri=`,
+		fillFormUrl: `https://abo.${title}.ch/tamstorefront/contact`,
 		messages: {
 			form: {
 				heading: 'Je me connecte',
@@ -19,7 +20,7 @@ export default function Manifest(title, acronym) {
 			info: {
 				activateAcc: 'Abonné(e) au journal mais pas encore enregistré(e) ?',
 				activateAccBtn: 'Activer l’accès',
-				contactPhone: '0842 850 150',
+				contactPhone,
 				contact() {
 					return `Des questions? ${this.contactPhone} Contactez-nous.`;
 				},

@@ -79,6 +79,10 @@ class LoginForm extends Component {
 						customClass={styles.LoginForm__btn}
 						text={pageManifest.messages.form.loginBtn}
 					/>
+
+					<a href={pageManifest.forgotPassUrl}>
+						<small>{pageManifest.messages.form.forgotPass}</small>
+					</a>
 				</form>
 				{this.props.error && <p className={styles.LoginForm__form__error}>{this.props.error || null}</p>}
 			</section>

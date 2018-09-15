@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from 'redux';
 import loginReducer from './reducers/login.js';
 import { pageManifest } from './index';
 
-import { types, secret, pageUrl } from './actions/constants';
+import { types, secret, pageUrl } from './constants.js';
 
 // Custom middleware for (not really) authenticating user
 const validateUser = () => next => action => {

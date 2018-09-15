@@ -10,7 +10,7 @@ import Info from './Info';
 
 const LoginPage = () => (
 	<section className={styles.LoginPage}>
-		<Logo imgUrl={pageManifest.logoUrl} />
+		<Logo title={pageManifest.title} imgUrl={pageManifest.logoUrl} />
 		<section className={styles.LoginPage__left}>
 			<div>
 				<p>{pageManifest.messages.info.activateAcc}</p>

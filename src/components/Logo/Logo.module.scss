@@ -6,6 +6,11 @@
 	top: 2rem;
 	right: 2rem;
 
+	& h1 {
+		position: absolute;
+		text-indent: -9999px;
+	}
+
 	& img {
 		width: 220px;
 

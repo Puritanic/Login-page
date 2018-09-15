@@ -6,10 +6,10 @@ import './styles/base/base.css';
 import App from './App';
 import store from './store';
 import registerServiceWorker from './registerServiceWorker';
-import Manifest from './manifestDer';
+import { newspapers } from './constants';
+import Manifest from './manifestDE';
 
-export const pageManifest = Manifest();
-
+export const pageManifest = Manifest(newspapers['tagesanzeiger']);
 const body = document.getElementsByTagName('body')[0];
 body.style.setProperty('--theme-color', pageManifest.accentColor);
 

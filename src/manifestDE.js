@@ -1,13 +1,13 @@
-export default function Manifest() {
+export default function Manifest({ title, acronym, contactPhone, accentColor }) {
 	return {
-		page: 'https://www.tagesanzeiger.ch/',
+		title,
+		page: `https://www.${title}.ch/`,
 		locale: 'de',
-		accentColor: '#0178BD',
-
-		logoUrl: 'https://abo.tagesanzeiger.ch/tamstorefront/tamMedia/logo-website_TA.svg',
-		forgotPassUrl: 'https://abo.tagesanzeiger.ch/tamstorefront/login/pw/request?callerUri=',
-		activateAccUrl: 'https://abo.tagesanzeiger.ch/tamstorefront/activate?callerUri=',
-		fillFormUrl: 'https://abo.tagesanzeiger.ch/tamstorefront/contact',
+		accentColor,
+		logoUrl: `https://abo.${title}.ch/tamstorefront/tamMedia/logo-website_${acronym}.svg`,
+		forgotPassUrl: `https://abo.${title}.ch/tamstorefront/login/pw/request?callerUri=`,
+		activateAccUrl: `https://abo.${title}.ch/tamstorefront/activate?callerUri=`,
+		fillFormUrl: `https://abo.${title}.ch/tamstorefront/contact`,
 		messages: {
 			form: {
 				heading: 'Login',
@@ -20,7 +20,7 @@ export default function Manifest() {
 			info: {
 				activateAcc: 'Sie sind Zeitungsabonnent und haben noch kein Login?',
 				activateAccBtn: 'Jetzt freischalten',
-				contactPhone: '+41 44 404 64 64',
+				contactPhone,
 				contact() {
 					return `Haben Sie Fragen? ${
 						this.contactPhone

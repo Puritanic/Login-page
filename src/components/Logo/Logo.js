@@ -1,13 +1,14 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-import { pageUrl } from '../../actions/constants';
+import { pageUrl } from '../../constants';
 import styles from './Logo.module.css';
 
-const Logo = props => {
+const Logo = ({ title, imgUrl }) => {
 	return (
 		<a className={styles.Logo} href={pageUrl}>
-			<img src={props.imgUrl} alt="Logo" />
+			<h1>{title}</h1>
+			<img src={imgUrl} alt="Company Logo" />
 		</a>
 	);
 };
